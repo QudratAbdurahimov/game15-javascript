@@ -1,0 +1,14 @@
+Sublimeni o'rnatish
+Tugma qo'yish
+onclick - xodisasi
+alert - orqali xabar chiqarish
+funksiyadan foydalanish
+if - shart operatoridan foydalanish
+for siklidan foydalanish
+getElementById - ID nima?
+classList.add("zero"); elementga CSS klass qo'shishi
+classList.remove("button"); elementdan CSS klassni o'chirish		
+
+array
+matrix
+random - tasodifiy sonlar bilan ishlash

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game-15</title>
+<style>
+	.button{
+		width: 100px;
+		height: 100px;
+		background-color: #e7e7e7;
+		border: none;
+		border-radius: 4px;
+		font-size: 32px;
+		margin: 4px 2px;
+		cursor: pointer;		
+	}
+	h2 {
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+	<h2>15 o'yini</h2>
+	<div align="center">
+		<button class="button" id="btn1_1">1</button>
+		<button class="button" id="btn1_2">2</button>
+		<button class="button" id="btn1_3">3</button>
+		<button class="button" id="btn1_4">4</button>
+		<br>
+
+		<button class="button" id="btn2_1">1</button>
+		<button class="button" id="btn2_2">2</button>
+		<button class="button" id="btn2_3">3</button>
+		<button class="button" id="btn2_4">4</button>
+		<br>
+
+		<button class="button" id="btn3_1">1</button>
+		<button class="button" id="btn3_2">2</button>
+		<button class="button" id="btn3_3">3</button>
+		<button class="button" id="btn3_4">4</button>
+		<br>
+
+		<button class="button" id="btn4_1">1</button>
+		<button class="button" id="btn4_2">2</button>
+		<button class="button" id="btn4_3">3</button>
+		<button class="button" id="btn4_4">4</button>
+		<br>
+		
+
+		<br><br>
+		<button>Yangi o'yin</button>
+	</div>
+<script>
+	var a = new Array();
+	var b = new Array();
+
+	for (var i = 1; i <= 4; i++) {
+		b[i] = new Array();
+	}
+
+	var k, soni;
+
+	for (var i = 1; i <= 15; i++) {
+
+		do {
+			soni = 0;
+			k = Math.round(Math.random()*14 + 1); // 15 gacha
+
+			for (var j = 1; j < i; j++)
+			if (a[j] == k) {
+				soni = 1;
+			}
+
+		} while (soni != 0 );
+		a[i] = k;
+	}
+	a[16] = 16;
+
+	k = 1;
+	for (let i = 1; i<= 4; i++)
+	for (let j = 1; j<= 4; j++){
+		b[i][j] = a[k];
+		k++;
+	}
+
+	for (let i = 1; i<= 4; i++)
+	for (let j = 1; j<= 4; j++)
+	document.getElementById('btn'+i+"_"+j).innerHTML = b[i][j];		
+	
+
+	console.log(b);
+</script>
+</body>
+</html>

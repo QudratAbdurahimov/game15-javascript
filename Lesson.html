@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game-15</title>
+<style>
+	.button{
+		width: 120px;
+		height: 100px;
+		background-color: #20d717;
+		border: none;
+		border-radius: 15px;
+		font-size: 24px;
+	}
+</style>
+</head>
+<body>
+	<h2>15 o'yini</h2>
+	<ol>
+	<li>Sublimeni o'rnatish</li>
+	<li>Tugma qo'yish</li>
+	<li>onclick - xodisasi</li>
+	<li>alert - orqali xabar chiqarish</li>
+	<li>funksiyadan foydalanish</li>
+	<li>if - shart operatoridan foydalanish</li>
+	<li>for siklidan foydalanish</li>
+	<li>getElementById - ID nima?</li>
+	<li>classList.add("zero"); elementga CSS klass qo'shishi</li>
+	<li>classList.remove("button"); elementdan CSS klassni o'chirish		</li>
+	<li>array</li>
+	<li>matrix</li>
+	<li>random - tasodifiy sonlar bilan ishlash</li>
+	</ol>
+
+	<button class="button" onclick="alert('Assalomu alaykum Dasturchi')">Tugma</button>
+	<br> <br>
+	<button id="btn" onclick="salom('Abdulloh')">Salom</button>
+	<br> <br>
+	<button class="button" onclick="shart()">shart</button>
+	<button class="button" onclick="sikl()">Sikl</button>
+
+	<button class="button" onclick="addClass()">addClass</button>
+	<button class="button" onclick="remove()">remove</button>
+
+
+
+
+<script>
+	function remove() {
+		document.getElementById('btn').classList.remove("button");
+	}
+
+	function addClass() {
+		document.getElementById('btn').classList.add("button");
+	}
+
+	function salom(name) {
+		alert("Assalomu alaykum " + name);
+	}
+
+	function shart() {
+		let baho = 3;
+		if (baho == 5) {
+			console.log('A`lo baho');
+		} else {
+			console.log('Baholar 5 EMAS');			
+		}
+	}
+
+	function sikl() {
+		for (var i = 1; i <= 10; i++) {
+			console.log(i);
+		}
+	}
+
+</script>
+</body>
+</html>
